@@ -34,8 +34,8 @@ To set up the Sharkie Game on your local system, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/Developer-Parth/Sharkie-Game.git
-   ```
+git clone https://github.com/Developer-Parth/Sharkie-Game.git
+```
 2. **Navigate to the Project Directory**:
  ```bash
    cd Sharkie-Game-main
