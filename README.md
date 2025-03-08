@@ -4,6 +4,10 @@ Sharkie Game is an engaging, interactive web-based game that immerses players in
 
 ---
 
+## LIVE DEMO
+
+***Play my game live at <a href="https://sharkie-parth-thukral.vercel.app/">here</a>***
+
 ## Features
 
 - **Interactive Gameplay**: Dive into a dynamic underwater environment filled with challenges and surprises.
