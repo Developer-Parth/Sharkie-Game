@@ -121,9 +121,9 @@ export default class Character extends MovableObject {
     onKeyUp() {
         /**stop swimming on key up (arrow right or left)*/
         this.game.events.on('keyup', () => {
-            if (event.code == 'ArrowRight') {
+            if (event.code == 'ArrowRight' || event.code == 'KeyD' || event.code == 'KeyW') {
                 this.stopSwimming('right');
-            } else if (event.code == 'ArrowLeft') {
+            } else if (event.code == 'ArrowLeft' || event.code == 'KeyA' || event.code == 'KeyS') {
                 this.stopSwimming('left');
             };
         });
@@ -132,9 +132,9 @@ export default class Character extends MovableObject {
     onKeyDown() {
         /**start swimming, jump, slap and shoot on key down */
         this.game.events.on('keydown', () => {
-            if (event.code == 'ArrowRight' && !event.repeat && !this.freeze) {
+            if ((event.code == 'ArrowRight' || event.code == 'KeyD' || event.code == 'KeyW') && !event.repeat && !this.freeze) {
                 this.startSwimming('right');
-            } else if (event.code == 'ArrowLeft' && !event.repeat && !this.freeze) {
+            } else if ((event.code == 'ArrowLeft' || event.code == 'KeyA' || event.code == 'KeyS') && !event.repeat && !this.freeze) {
                 this.startSwimming('left');
             } else if ((event.code == 'Space' || event.code == 'ArrowUp') && !event.repeat && !this.freeze) {
                 this.jump();
@@ -145,6 +145,7 @@ export default class Character extends MovableObject {
             };
         });
     };
+    
 
     /**take dmg */
     takeDmg(amount, type) {
