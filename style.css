@@ -255,6 +255,53 @@ body {
     animation: night-text-fade 4s var(--cubic-bezier) infinite;
 }
 
+.intro {
+    position: absolute;
+    background-color: #000000B3;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    animation: intro-fade-out 2.5s 1;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(6px);
+}
+
+h1 {
+    font-size: 48px;
+    color: white;
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    z-index: 100;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .absolute {
     position: absolute;
     z-index: 1;
