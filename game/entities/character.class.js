@@ -132,11 +132,11 @@ export default class Character extends MovableObject {
     onKeyDown() {
         /**start swimming, jump, slap and shoot on key down */
         this.game.events.on('keydown', () => {
-            if ((event.code == 'ArrowRight' || event.code == 'KeyD' || event.code == 'KeyW') && !event.repeat && !this.freeze) {
+            if ((event.code == 'ArrowRight' || event.code == 'KeyD') && !event.repeat && !this.freeze) {
                 this.startSwimming('right');
             } else if ((event.code == 'ArrowLeft' || event.code == 'KeyA' || event.code == 'KeyS') && !event.repeat && !this.freeze) {
                 this.startSwimming('left');
-            } else if ((event.code == 'Space' || event.code == 'ArrowUp') && !event.repeat && !this.freeze) {
+            } else if ((event.code == 'Space' || event.code == 'ArrowUp' || event.code == 'KeyW') && !event.repeat && !this.freeze) {
                 this.jump();
             } else if (event.key == 'y' && !event.repeat && !this.freeze) {
                 this.slap();
